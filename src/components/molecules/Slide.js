@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Text, Dimensions, StyleSheet } from 'react-native';
-
-import { moderateScale, scale, verticalScale } from '../../utils/normalizingSize';
+import { RFPercentage } from 'react-native-responsive-fontsize';	
 
 const {width, height} = Dimensions.get('window');
 
@@ -34,8 +33,8 @@ const styles = StyleSheet.create({
 		justifyContent: 'center'
 	},
 	title: {
-		fontSize: moderateScale(70),
-		lineHeight: moderateScale(70),
+		fontSize: RFPercentage(11),
+		lineHeight: RFPercentage(11),
 		fontFamily: 'SF-Pro-Text-Bold',
 		color: 'white',
 		textAlign: 'center'

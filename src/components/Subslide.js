@@ -1,7 +1,10 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Dimensions } from 'react-native';
+import { RFPercentage } from 'react-native-responsive-fontsize';
 
 import Button from './atoms/Button';
+
+const { width } = Dimensions.get('window');
 
 const Subslide = ({ subtitle, description, last, onPress = () => {} }) => {
 	return (
@@ -24,22 +27,23 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		padding: 44
+		padding: 44,
+		paddingBottom: 12
 	},
 	subtitle: {
-		marginBottom: 12,
-		fontSize: 22,
+		marginBottom: RFPercentage(1.2),
+		fontSize: RFPercentage(3.25),
 		fontFamily: 'SF-Pro-Text-Semibold',
 		color: '#0C0D34',
-		lineHeight: 30,
+		lineHeight: RFPercentage(3.2),
 		textAlign: 'center'
 	},
 	description: {
-		fontSize: 16,
+		fontSize: RFPercentage(2),
 		fontFamily: 'SF-Pro-Text-Regular',
 		color: '#0C0D34',
-		lineHeight: 22,
+		lineHeight: RFPercentage(3.1),
 		textAlign: 'center',
-		marginBottom: 40
+		marginBottom: RFPercentage(4.2)
 	},
 });
